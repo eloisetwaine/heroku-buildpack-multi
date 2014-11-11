@@ -55,7 +55,7 @@ for BUILDPACK in $(cat $1/.buildpacks); do
       echo "Current dir: $dir"
 
       # check if the buildpack left behind an environment for subsequent ones
-      if [ -e $dir/export ]; then
+      if [ -e $1/export ]; then
         source $dir/export
       fi
 
