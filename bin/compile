@@ -56,7 +56,7 @@ for BUILDPACK in $(cat $1/.buildpacks); do
 
       # check if the buildpack left behind an environment for subsequent ones
       if [ -e $1/export ]; then
-        source $dir/export
+        source $1/export
       fi
 
       if [ -x $dir/bin/release ]; then
